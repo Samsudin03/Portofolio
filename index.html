@@ -12,8 +12,9 @@
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+    background: url('https://images.unsplash.com/photo-1614064641890-6817e54e4b8a?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
     background-size: cover;
+    backdrop-filter: blur(2px);
   }
 
   header {
@@ -21,7 +22,12 @@
     color: #fff;
     padding: 50px 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+
+  header:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   }
 
   header img {
@@ -55,9 +61,14 @@
     padding: 50px 20px;
     max-width: 960px;
     margin: 40px auto;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+
+  section:hover {
+    transform: translateY(-4px);
   }
 
   h2 {
@@ -88,9 +99,11 @@
   a {
     color: #007acc;
     text-decoration: none;
+    transition: color 0.3s ease;
   }
 
   a:hover {
+    color: #004d7a;
     text-decoration: underline;
   }
 
@@ -104,9 +117,11 @@
     header h1 {
       font-size: 2rem;
     }
+
     header p {
       font-size: 1rem;
     }
+
     section {
       padding: 30px 15px;
     }
