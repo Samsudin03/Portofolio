@@ -7,162 +7,162 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background: linear-gradient(-45deg, #004d7a, #008793, #00bf72, #a8eb12);
-    background-size: 400% 400%;
-    animation: gradientMove 20s ease infinite;
-  }
-
-  @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  header {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 1.5s ease forwards;
-  }
-
-  header img {
-    width: 150px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 4px solid #fff;
-    transition: transform 0.3s ease;
-  }
-
-  header img:hover {
-    transform: scale(1.05);
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 800;
-    transition: text-shadow 0.3s ease;
-  }
-
-  header h1:hover {
-    text-shadow: 0 0 10px #00c3ff;
-  }
-
-  header p {
-    margin: 8px 0;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-
-  .contact-info p, .contact-info a {
-    font-size: 0.95rem;
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-
-  .contact-info a:hover {
-    color: #a8eb12;
-  }
-
-  section {
-    padding: 50px 20px;
-    max-width: 960px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.2s ease forwards;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  section.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 1s ease;
-  }
-
-  h2 {
-    color: #004d7a;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #008793;
-    padding-bottom: 8px;
-  }
-
-  .section-content {
-    margin-bottom: 40px;
-  }
-
-  p {
-    text-align: justify;
-  }
-
-  ul {
-    padding-left: 20px;
-    margin-top: 10px;
-  }
-
-  ul li {
-    margin-bottom: 8px;
-  }
-
-  a {
-    color: #007acc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  a:hover {
-    color: #004d7a;
-    text-decoration: underline;
-  }
-
-  .job-title {
-    font-weight: 600;
-    margin-top: 20px;
-    color: #2c3e50;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      background: linear-gradient(-45deg, #004d7a, #008793, #00bf72, #a8eb12);
+      background-size: 400% 400%;
+      animation: gradientMove 20s ease infinite;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-  @media (max-width: 768px) {
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    header img {
+      width: 150px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border: 4px solid #fff;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
     header h1 {
-      font-size: 2rem;
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 800;
+      transition: text-shadow 0.3s ease;
+    }
+
+    header h1:hover {
+      text-shadow: 0 0 10px #00c3ff;
     }
 
     header p {
-      font-size: 1rem;
+      margin: 8px 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .contact-info p, .contact-info a {
+      font-size: 0.95rem;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #a8eb12;
     }
 
     section {
-      padding: 30px 15px;
+      padding: 50px 20px;
+      max-width: 960px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
     }
-  }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 1s ease;
+    }
+
+    h2 {
+      color: #004d7a;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #008793;
+      padding-bottom: 8px;
+    }
+
+    .section-content {
+      margin-bottom: 40px;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #004d7a;
+      text-decoration: underline;
+    }
+
+    .job-title {
+      font-weight: 600;
+      margin-top: 20px;
+      color: #2c3e50;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 30px 15px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="Foto_Sams.jpeg" alt="Foto Samsudin" style="width: 150px; height: 170px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
+    <img src="Foto_Sams.jpeg" alt="Foto Samsudin" />
     <h1>Samsudin, S.Kom., M.I.Kom.</h1>
     <p>Supply Chain Data Analyst</p>
     <div class="contact-info">
@@ -174,129 +174,22 @@
   <section>
     <h2>Profil</h2>
     <div class="section-content">
-      <p style="text-align: justify;">I hold a Master’s degree in Communication Science from the Institut Ilmu Sosial dan Manajemen STIAMI, with a concentration in Strategic Corporate & Government Public Relations. Currently, I work as a Supply Chain Data Analyst with over two years of experience in the data analytics field. I am skilled in SAP ERP, Power BI, Python, Looker Data Studio, WMS, and Microsoft Office—especially Excel. I have completed training and certifications in Data Analysis and am also a certified General Occupational Health and Safety (Ahli K3 Umum) professional. I am committed to delivering innovative solutions that drive business growth and create long-term value.
-Throughout my career, I have collaborated with cross-functional teams to implement strategies focused on improving operational efficiency. I am comfortable working in dynamic environments and constantly seek opportunities to learn and grow.
-I am always excited by new challenges and opportunities that allow me to sharpen my skills, expand my network, and contribute meaningfully to achieving organizational goals.</p>
-    </div>
-
-    <h2>Work Experience</h2>
-    <div class="section-content">
-      <p class="job-title">Supply Chain Data Analyst – PT Sukanda Djaya (Dec 2022–Present)</p>
-      <ul>
-        <li>Collected, cleaned, and analyzed data from logistics systems such as WMS and SAP ERP to support operational and strategic decision-making.</li>
-        <li>Developed interactive dashboards using Power BI to monitor warehouse performance, stock movement, cycle count accuracy, and delivery efficiency.</li>
-        <li>Conducted analysis of stock-taking activities and investigated stock discrepancies.</li>
-        <li>Collaborated across divisions (warehouse, Sales, operations, Audit, IT and Supply Demand) to improve data-driven supply chain processes.</li>
-        <li>Prepared regular reports on warehouse key performance indicators (KPIs), such as service level rate, stock turnover, and aging inventory.</li>
-        <li>Developed data reporting SOPs and enhanced manual process automation using Excel and Python (as needed).</li>
-        <li>Provided insights from historical data to support demand forecasting and logistics planning.</li>
-        <li>Performed root cause analysis on data discrepancies or declining performance cases.</li>
-        <li>Overseeing disposal processes and managing principal-related matters.</li>
-      </ul>
-
-      <p class="job-title">Admininistration Staff – PT Samudera Logistics Services (May-Nov 2022)</p>
-      <ul>
-        <li>Created supplier arrival planning and scheduling.</li>
-        <li>Prepared and verified daily operational reports, including Write Off Proposals (WOP), for internal use and external clients.</li>
-        <li>Managed material stock data accurately using systems such as SAP, WMS, or Excel, including input and updates of incoming and outgoing goods.</li>
-        <li>Ensured completeness of logistics documents such as delivery notes, goods receipt reports, and shipping documents.</li>
-        <li>Coordinated with warehouse and operations teams to ensure smooth distribution processes.</li>
-        <li>Ensuring KPI targets for invoicing to clients are achieved.</li>
-      </ul>
-
-      <p class="job-title">Warehouse Adiministration – PT Mulia Boga Raya (Sep 2021 – Mar 2022)</p>
-      <ul>
-        <li>Managed and maintained warehouse administrative documents, including receipt reports, release records, and stock opname reports.</li>
-        <li>Ensured stock data in the system (SAP ERP/WMS) was accurate and up to date.</li>
-        <li>Coordinated with production, procurement, and distribution departments regarding goods requirements and deliveries.</li>
-        <li>Supervised the data entry process for incoming and outgoing goods and ensured completeness of supporting documents such as delivery notes, invoices, and others.</li>
-        <li>Assisted with internal and external audits related to warehouse administration.</li>
-        <li>Organized warehouse document archives systematically to facilitate easy retrieval and reporting.</li>
-        <li>Generated monthly and weekly reports on stock levels and warehouse activities for management.</li>
-        <li>Maintained effective communication with the warehouse team and relevant parties to ensure smooth operations.</li>
-      </ul>
-
-      <p class="job-title">Transport Manajemen System (TMS) – PT Linfox Logistic Indonesia (Jul 2021 – Sep 2022)</p>
-      <ul>
-        <li>Managed the daily operations and configuration of the company's Transport Management System (TMS).</li>
-        <li>Collaborated with logistics vendors, warehouses, and other departments to ensure smooth goods delivery.</li>
-        <li>Created and compiled transportation performance reports (KPIs) such as On-Time Delivery (OTD) and trip completion rate.</li>
-        <li>Actively contributed to the implementation, migration, or integration of TMS with SAP or WMS systems.</li>
-        <li>Ensured all transportation activities complied with safety standards and applicable regulations.</li>
-      </ul>
-    </div>
-
-     <p class="job-title">Customer Service Representative Indosat – CV Makmur Jaya  (Feb 2021 – Jun 2022)</p>
-      <ul>
-        <li>Handled customer inquiries, requests, and complaints directly or via phone.</li>
-        <li>Provided quick, accurate, and procedure-compliant solutions to customer issues related to products, networks, or services.</li>
-        <li>Communicated product information, new features, service packages, and promotions in a clear and educational manner.</li>
-        <li>Documented every customer interaction thoroughly and accurately in the system.</li>
-        <li>Participated in regular training on new products, service systems, and customer communication soft skills.</li>
-        <li>Proposed service improvement ideas based on customer needs and behavior.</li>
-        <li>Maintained customer data confidentiality and complied with the company’s information security policies.</li>
-      </ul>
-    </div>
-
-    <p class="job-title">Admin WH Raw Material – PT Frina Lestari Nusantara  (Dec 2017 – Jul 2019)</p>
-      <ul>
-        <li>Recorded and verified raw material receiving documents from suppliers into the system (ERP/WMS) accurately and on time.</li>
-        <li>Entered daily raw material in-out data and ensured consistency between physical stock and system records (stock card & actual stock).</li>
-        <li>Prepared daily, weekly, and monthly raw material stock reports for production and audit purposes.</li>
-        <li>Maintained and managed document archives such as Delivery Orders (DO), Purchase Orders (PO), Delivery Notes, and Minutes of Meeting.</li>
-        <li>Coordinated with Quality Control, Purchasing, and Production teams regarding the completeness, quality, and needs of raw materials.</li>
-        <li>Ensured FIFO (First In First Out) or other methods were implemented according to raw material warehouse SOPs.</li>
-        <li>Supervised document compliance during cycle count, stock opname, and both internal and external audits.</li>
-        <li>Applied the 5R system (Sort, Set in Order, Shine, Standardize, Sustain) within the warehouse administration area.</li>
-        <li>Utilized ERP systems (ABAS, Oracle) and supporting Microsoft Office applications for reporting and data analysis.</li>
-      </ul>
-    </div>
-
-    <h2>Education</h2>
-    <div class="section-content">
-      <p><strong>Master of Communication Science</strong> – Institut Ilmu Sosial dan Manajemen STIAMI, 2023–2024 | IPK 3.86</p>
-      <p><strong>Bachelor of Engineering</strong> – STMIK MIC Cikarang, 2016–2020 | IPK 3.59</p>
-    </div>
-
-    <h2>Publikasi Ilmiah</h2>
-    <div class="section-content">
-      <ul>
-        <li><a href="https://journal-laaroiba.com/ojs/index.php/edu/article/view/4466" target="_blank">Strategi Komunikasi Kepala Desa dalam Meningkatkan Pendidikan Masyarakat di Desa Karang Mukti Kecamatan Karang Bahagia Kabupaten Bekasi</a> (EduInovasi, 2024)</li>
-        <li><a href="https://jiss.publikasiindonesia.id/index.php/jiss/article/view/1086" target="_blank">Governance of The Corporate Social Responsibility (CSR) Program of Karang Mukti Village in The Development of Embung Batu Beureum Tourism</a> (Publikasi Indonesia, 2024)</li>
-        <li><a href="https://journal.ikopin.ac.id/index.php/humantech/article/view/3552" target="_blank">Strategi Public Relations Klinik Pusat Fertilitas Bocah Indonesia Dalam Menyebarkan Informasi Melalui Media Sosial Instagram</a> (IKOPIN, 2023)</li>
-      </ul>
-    </div>
-
-    <h2>Certifications & Training</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Pemerograman Python – Dicoding:</strong> Apr 2025</li>
-        <li><strong>Bootcamp Data Analyst – MySkill:</strong> Nov - Dec 2024</li>
-        <li><strong>Looker Google Data Studio – MySkill:</strong> Nov 2024</li>
-        <li><strong>Strategi Komunikasi Digital – Institut STIAMI:</strong> Jun 2024</li>
-        <li><strong>Inovasi Komunikasi Politik – Institut STIAMI:</strong> Dec 2023</li>
-        <li><strong>Inventory Management – PT Inter Strada Solustrindo:</strong> Jul 2022</li>
-        <li><strong>Warehouse Management – PT Inter Strada Solustrindo:</strong> Jul 2022</li>
-        <li><strong>Quality Management System – PT Inter Strada Solustrindo:</strong> Apr 2022</li>
-        <li><strong>Ahli K3 Umum – Kementerian Ketenagakerjaan:</strong> Mar-Apr 2022</li>
-        <li><strong>Office Aplication – Lembaga Pendidikan Indonesia Amerika:</strong> Aug-Sep 2021</li>
-        <li><strong>Multimedia TI – BNSP:</strong> Jul 2020</li>
-        <li><strong>Junior Office Operator – BNSP:</strong> Jun 2017</li>
-      </ul>
-    </div>
-
-    <h2>Skill & Languages</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Skill:</strong>Microsoft Office (Excel), SAP ERP, Looker Data Studio, Power BI, Python</li>
-        <li><strong>Languages:</strong>Indonesia (Aktif), English (Pasif)</li>
-      </ul>
-    </div>
-
-    <h2>Reference</h2>
-    <div class="section-content">
-      <p><strong>Hafizil Ziko S</strong> – Data Analyst, PT Sukanda Djaya | <a href="tel:+6285269543471">+62 852 6954 3471</a></p>
+      <p>Saya adalah Data Analyst berpengalaman di bidang rantai pasok, mahir Power BI, SAP ERP, Python, dan Excel. Saya memiliki gelar Magister Ilmu Komunikasi dan tersertifikasi Ahli K3 Umum. Saya siap menghadirkan solusi data yang berdampak dan inovatif.</p>
     </div>
   </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const showOnScroll = () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", showOnScroll);
+    window.addEventListener("load", showOnScroll);
+  </script>
 </body>
 </html>
