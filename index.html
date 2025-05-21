@@ -1,194 +1,183 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portofolio Samsudin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Portfolio</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #f6f9fc, #e9eff5);
       color: #333;
-      line-height: 1.6;
-      background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-      background-size: cover;
     }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 50px 20px;
+    .hero {
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?coding,technology,workspace') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 1.2s ease forwards;
+      color: white;
+      position: relative;
+      flex-direction: column;
+      padding: 2rem;
     }
 
-    header img {
-      width: 150px;
-      height: 170px;
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 2s ease;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .hero-content img {
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      border: 4px solid #fff;
-      transition: transform 0.3s ease;
+      border: 5px solid white;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
     }
 
-    header img:hover {
-      transform: scale(1.05);
+    .contact-info {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 800;
-      transition: text-shadow 0.3s ease;
-    }
-
-    header h1:hover {
-      text-shadow: 0 0 10px #00c3ff;
-    }
-
-    header p {
-      margin: 8px 0;
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-
-    .contact-info p, .contact-info a {
-      font-size: 0.95rem;
-      color: #fff;
-      transition: color 0.3s ease;
+    .contact-info a {
+      color: #f8f9fa;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
     }
 
     .contact-info a:hover {
-      color: #a8eb12;
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 960px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 1s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      color: #004d7a;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #008793;
-      padding-bottom: 8px;
-    }
-
-    .section-content {
-      margin-bottom: 40px;
-    }
-
-    p {
-      text-align: justify;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #004d7a;
+      color: #0d6efd;
       text-decoration: underline;
     }
 
-    .job-title {
-      font-weight: 600;
-      margin-top: 20px;
-      color: #2c3e50;
-    }
-
-    @keyframes fadeIn {
+    @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      section {
-        padding: 30px 15px;
-      }
+    .section-title {
+      text-align: center;
+      margin: 3rem 0;
+      font-weight: bold;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section boxes for education, experience, publications */
+    .section-box {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    }
+
+    /* Publication links */
+    .publication-link {
+      text-decoration: none;
+      color: #0d6efd;
+      transition: color 0.3s;
+    }
+
+    .publication-link:hover {
+      color: #0a58ca;
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="Foto_Sams.jpeg" alt="Foto Samsudin" style="width: 150px; height: 170px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
-    <h1>Samsudin, S.Kom., M.I.Kom.</h1>
-    <p style="text-align: center;">Supply Chain Data Analyst</p>
-    <div class="contact-info">
-      <p style="text-align: center;">Bekasi, Jawa Barat | <a href="mailto:samsudindn10@gmail.com">samsudindn10@gmail.com</a> | <a href="https://wa.me/6281298115724">+62 812 9811 5724</a></p>
-      <p style="text-align: center;"><a href="https://www.linkedin.com/in/samsudin-s-kom-m-i-kom-8244a41a6/" target="_blank">LinkedIn</a></p>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="Foto_Sams.jpeg" alt="Foto Samsudin" />
+      <h1 class="display-4 fw-bold">Hi, I'm Samsudin, S.Kom., M.I.Kom.</h1>
+      <p class="lead">Supply Chain Data Analyst | Data Analyst | Warehouse Analyst</p>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <p>
+          <i class="fa-solid fa-envelope me-2"></i>
+          <a href="mailto:samsudindn10@gmail.com">samsudindn10@gmail.com</a>
+        </p>
+        <p>
+          <i class="fa-solid fa-phone me-2"></i>
+          <a href="https://wa.me/6281298115724">+62 812 9811 5724</a>
+        </p>
+        <p>
+          <i class="fab fa-linkedin me-2"></i>
+          <a href="https://www.linkedin.com/in/samsudin-s-kom-m-i-kom-8244a41a6/" target="_blank" rel="noopener noreferrer">LinkedIn.com/in/Samsudin, S.Kom., M.I.Kom.</a>
+        </p>
+	<p>
+          <i class="fab fa-solid fa-file-lines me-2"></i>
+          <a href="CV_Samsudin.pdf" download class="btn-download">📄 Download CV</a>
+        </p>
+      </div>
+
+      <a href="#work-experience" class="btn btn-primary btn-lg mt-3">View My Work</a>
     </div>
-     <div style="margin-top: 20px;">
-    <a href="CV_Samsudin.pdf" download class="btn-download">📄 Download CV</a>
-  </div>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <div class="section-content">
-      <p style="text-align: justify;">I hold a Master’s degree in Communication Science from the Institut Ilmu Sosial dan Manajemen STIAMI, with a concentration in Strategic Corporate & Government Public Relations. Currently, I work as a Supply Chain Data Analyst with over two years of experience in the data analytics field. I am skilled in SAP ERP, Power BI, Python, Looker Data Studio, WMS, and Microsoft Office—especially Excel. I have completed training and certifications in Data Analysis and am also a certified General Occupational Health and Safety (Ahli K3 Umum) professional. I am committed to delivering innovative solutions that drive business growth and create long-term value.
+  <section id="about" class="container py-5">
+    <h2 class="section-title">About Me</h2>
+    <p class="text-justify">I hold a Master’s degree in Communication Science from the Institut Ilmu Sosial dan Manajemen STIAMI, with a concentration in Strategic Corporate & Government Public Relations. Currently, I work as a Supply Chain Data Analyst with over two years of experience in the data analytics field. I am skilled in SAP ERP, Power BI, Python, Looker Data Studio, WMS, and Microsoft Office—especially Excel. I have completed training and certifications in Data Analysis and am also a certified General Occupational Health and Safety (Ahli K3 Umum) professional. I am committed to delivering innovative solutions that drive business growth and create long-term value.
 Throughout my career, I have collaborated with cross-functional teams to implement strategies focused on improving operational efficiency. I am comfortable working in dynamic environments and constantly seek opportunities to learn and grow.
 I am always excited by new challenges and opportunities that allow me to sharpen my skills, expand my network, and contribute meaningfully to achieving organizational goals.</p>
-    </div>
-  
-    <section>
-    <h2>Project Dashboard</h2> 
-<div class="section-content">
-  <h3>Dashboard Power BI – Monitoring Stock</h3>
-  <p style="text-align: justify;">This dashboard is designed to visualize warehouse stock monitoring based on data from SAP ERP. Its purpose is to track stock availability, cycle count accuracy, and other key indicators.</p>
-  <p>🗂️ <strong>Link:</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiODNmNjI3ZjMtNDcwMC00YjQxLTg4NjgtMjZiNmI1ZTM4NjUyIiwidCI6ImU0MDIwZTNkLTIzMWUtNDVmMS1iMDIzLWU0NjNiMWYwZjdmMiIsImMiOjEwfQ%3D%3D" target="_blank">Lihat Dashboard Power BI</a></p>
-  <h3>Dashboard Power BI – Accuracy Cycle Counting</h3>
-  <p style="text-align: justify;">This dashboard is designed to visualize the monitoring of Cycle Count Accuracy, which measures the level of alignment between the physical stock in the warehouse and the system records (SAP/WMS) based on regularly conducted cycle counting processes. Its purpose is to ensure inventory data reliability, detect recording errors early, and support operational efficiency so that a full stock opname can achieve maximum accuracy.</p>
-  <p>🗂️ <strong>Link:</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiNDAyMDA4NjMtMGRjOS00M2ZmLTk2MzQtOWNhYzM5MmFiYmIzIiwidCI6ImU0MDIwZTNkLTIzMWUtNDVmMS1iMDIzLWU0NjNiMWYwZjdmMiIsImMiOjEwfQ%3D%3D" target="_blank">Lihat Dashboard Power BI</a></p>
-  <h3>Dashboard Power BI – Monitoring Purchase Order</h3>
-  <p style="text-align: justify;">This dashboard is designed to visualize the monitoring process of Purchase Orders (PO), from issuance to goods receipt. Through this dashboard, users can view the status of each PO, calculate order lead time, evaluate vendor performance based on delivery punctuality, and identify potential bottlenecks in the procurement process. This enables the procurement team to take timely and accurate actions in managing purchase orders.</p>
-  <p>🗂️ <strong>Link:</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiOTVhMWYwOGQtZDQ3Zi00YTQ2LWEwZGQtYjA5MWI5MGIzNDhkIiwidCI6ImU0MDIwZTNkLTIzMWUtNDVmMS1iMDIzLWU0NjNiMWYwZjdmMiIsImMiOjEwfQ%3D%3D" target="_blank">Lihat Dashboard Power BI</a></p>
-</div>
+  </section>
 
-    <h2>Work Experience</h2>
-    <div class="section-content">
-      <p class="job-title">Supply Chain Data Analyst – PT Sukanda Djaya (Dec 2022–Present)</p>
+  <!-- Education Section -->
+  <section id="education" class="container section-box">
+    <h2 class="section-title">Education</h2>
+    <ul class="list-unstyled fs-5">
+      <li><strong>Master of Communication Science</strong>, Institut Ilmu Sosial dan Manajemen STIAMI – 2024 | IPK 3.86</li>
+      <li><strong>Bachelor of Computer</strong>, STMIK MIC Cikarang – 2020 | IPK 3.59</li>
+    </ul>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="work-experience" class="container section-box">
+    <h2 class="section-title">Work Experience</h2>
+    <div>
+      <h5><strong>Supply Chain Data Analyst</strong> – PT Sukanda Djaya <small class="text-muted">(Dec 2023 - Present)</small></h5>
       <ul>
         <li>Collected, cleaned, and analyzed data from logistics systems such as WMS and SAP ERP to support operational and strategic decision-making.</li>
         <li>Developed interactive dashboards using Power BI to monitor warehouse performance, stock movement, cycle count accuracy, and delivery efficiency.</li>
@@ -200,10 +189,9 @@ I am always excited by new challenges and opportunities that allow me to sharpen
         <li>Performed root cause analysis on data discrepancies or declining performance cases.</li>
         <li>Overseeing disposal processes and managing principal-related matters.</li>
       </ul>
-      </div>
-
-      <div class="section-content">
-      <p class="job-title">Admininistration – PT Samudera Logistics Services (May-Nov 2022)</p>
+    </div>
+    <div class="mt-4">
+      <h5><strong>Admininistration</strong> – PT Samudera Logistics Services <small class="text-muted">(May-Nov 2022)</small></h5>
       <ul>
         <li>Created supplier arrival planning and scheduling.</li>
         <li>Prepared and verified daily operational reports, including Write Off Proposals (WOP), for internal use and external clients.</li>
@@ -212,12 +200,11 @@ I am always excited by new challenges and opportunities that allow me to sharpen
         <li>Coordinated with warehouse and operations teams to ensure smooth distribution processes.</li>
         <li>Ensuring KPI targets for invoicing to clients are achieved.</li>
       </ul>
-      </div>
-
-     <div class="section-content">
-      <p class="job-title">Warehouse Adiministration – PT Mulia Boga Raya (Sep 2021 – Mar 2022)</p>
+    </div>
+   <div class="mt-4">
+      <h5><strong>Warehouse Adiministration</strong> – PT Mulia Boga Raya <small class="text-muted">(Sep 2021 – Mar 2022)</small></h5>
       <ul>
-        <li>Managed and maintained warehouse administrative documents, including receipt reports, release records, and stock opname reports.</li>
+       <li>Managed and maintained warehouse administrative documents, including receipt reports, release records, and stock opname reports.</li>
         <li>Ensured stock data in the system (SAP ERP/WMS) was accurate and up to date.</li>
         <li>Coordinated with production, procurement, and distribution departments regarding goods requirements and deliveries.</li>
         <li>Supervised the data entry process for incoming and outgoing goods and ensured completeness of supporting documents such as delivery notes, invoices, and others.</li>
@@ -226,23 +213,21 @@ I am always excited by new challenges and opportunities that allow me to sharpen
         <li>Generated monthly and weekly reports on stock levels and warehouse activities for management.</li>
         <li>Maintained effective communication with the warehouse team and relevant parties to ensure smooth operations.</li>
       </ul>
-     </div>
-      
-    <div class="section-content">
-      <p class="job-title">Transport Manajemen System (TMS) – PT Linfox Logistic Indonesia (Jul 2021 – Sep 2022)</p>
+    </div>
+   <div class="mt-4">
+      <h5><strong>Transport Manajemen System (TMS)</strong> – PT Linfox Logistic Indonesia <small class="text-muted">(Jul 2021 – Sep 2021)</small></h5>
       <ul>
-        <li>Managed the daily operations and configuration of the company's Transport Management System (TMS).</li>
+       <li>Managed the daily operations and configuration of the company's Transport Management System (TMS).</li>
         <li>Collaborated with logistics vendors, warehouses, and other departments to ensure smooth goods delivery.</li>
         <li>Created and compiled transportation performance reports (KPIs) such as On-Time Delivery (OTD) and trip completion rate.</li>
         <li>Actively contributed to the implementation, migration, or integration of TMS with SAP or WMS systems.</li>
         <li>Ensured all transportation activities complied with safety standards and applicable regulations.</li>
       </ul>
     </div>
-
-    <div class="section-content">
-     <p class="job-title">Customer Service Representative Indosat – CV Makmur Jaya  (Feb 2021 – Jun 2022)</p>
+   <div class="mt-4">
+      <h5><strong>Customer Service Representative Indosat</strong> – CV Makmur Jaya <small class="text-muted">(Feb 2021 – Jun 2021)</small></h5>
       <ul>
-        <li>Handled customer inquiries, requests, and complaints directly or via phone.</li>
+       <li>Handled customer inquiries, requests, and complaints directly or via phone.</li>
         <li>Provided quick, accurate, and procedure-compliant solutions to customer issues related to products, networks, or services.</li>
         <li>Communicated product information, new features, service packages, and promotions in a clear and educational manner.</li>
         <li>Documented every customer interaction thoroughly and accurately in the system.</li>
@@ -251,11 +236,10 @@ I am always excited by new challenges and opportunities that allow me to sharpen
         <li>Maintained customer data confidentiality and complied with the company’s information security policies.</li>
       </ul>
     </div>
-
-    <div class="section-content"> 
-      <p class="job-title">Admin WH Raw Material – PT Frina Lestari Nusantara  (Dec 2017 – Jul 2019)</p>
+   <div class="mt-4">
+      <h5><strong>Admin WH Raw Material</strong> – PT Frina Lestari Nusantara <small class="text-muted">(Dec 2017 – Jul 2019)</small></h5>
       <ul>
-        <li>Recorded and verified raw material receiving documents from suppliers into the system (ERP/WMS) accurately and on time.</li>
+       <li>Recorded and verified raw material receiving documents from suppliers into the system (ERP/WMS) accurately and on time.</li>
         <li>Entered daily raw material in-out data and ensured consistency between physical stock and system records (stock card & actual stock).</li>
         <li>Prepared daily, weekly, and monthly raw material stock reports for production and audit purposes.</li>
         <li>Maintained and managed document archives such as Delivery Orders (DO), Purchase Orders (PO), Delivery Notes, and Minutes of Meeting.</li>
@@ -266,67 +250,66 @@ I am always excited by new challenges and opportunities that allow me to sharpen
         <li>Utilized ERP systems (ABAS, Oracle) and supporting Microsoft Office applications for reporting and data analysis.</li>
       </ul>
     </div>
-
-    <h2>Education</h2>
-    <div class="section-content">
-      <p><strong>Master of Communication Science</strong> – Institut Ilmu Sosial dan Manajemen STIAMI, 2023–2024 | IPK 3.86</p>
-      <p><strong>Bachelor of Computer</strong> – STMIK MIC Cikarang, 2016–2020 | IPK 3.59</p>
-    </div>
-
-    <h2>Scientific Publication</h2>
-    <div class="section-content">
-      <ul>
-        <li><a href="https://journal-laaroiba.com/ojs/index.php/edu/article/view/4466" target="_blank">Strategi Komunikasi Kepala Desa dalam Meningkatkan Pendidikan Masyarakat di Desa Karang Mukti Kecamatan Karang Bahagia Kabupaten Bekasi</a> (EduInovasi, 2024)</li>
-        <li><a href="https://jiss.publikasiindonesia.id/index.php/jiss/article/view/1086" target="_blank">Governance of The Corporate Social Responsibility (CSR) Program of Karang Mukti Village in The Development of Embung Batu Beureum Tourism</a> (Publikasi Indonesia, 2024)</li>
-        <li><a href="https://journal.ikopin.ac.id/index.php/humantech/article/view/3552" target="_blank">Strategi Public Relations Klinik Pusat Fertilitas Bocah Indonesia Dalam Menyebarkan Informasi Melalui Media Sosial Instagram</a> (IKOPIN, 2023)</li>
-      </ul>
-    </div>
-
-    <h2>Certifications & Training</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Pemerograman Python – Dicoding:</strong> Apr 2025</li>
-        <li><strong>Bootcamp Data Analyst – MySkill:</strong> Nov - Dec 2024</li>
-        <li><strong>Looker Google Data Studio – MySkill:</strong> Nov 2024</li>
-        <li><strong>Strategi Komunikasi Digital – Institut STIAMI:</strong> Jun 2024</li>
-        <li><strong>Inovasi Komunikasi Politik – Institut STIAMI:</strong> Dec 2023</li>
-        <li><strong>Inventory Management – PT Inter Strada Solustrindo:</strong> Jul 2022</li>
-        <li><strong>Warehouse Management – PT Inter Strada Solustrindo:</strong> Jul 2022</li>
-        <li><strong>Quality Management System – PT Inter Strada Solustrindo:</strong> Apr 2022</li>
-        <li><strong>Ahli K3 Umum – Kementerian Ketenagakerjaan:</strong> Mar-Apr 2022</li>
-        <li><strong>Office Aplication – Lembaga Pendidikan Indonesia Amerika:</strong> Aug-Sep 2021</li>
-        <li><strong>Multimedia TI – BNSP:</strong> Jul 2020</li>
-        <li><strong>Junior Office Operator – BNSP:</strong> Jun 2017</li>
-      </ul>
-    </div>
-
-    <h2>Skill & Languages</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Skill:</strong>Microsoft Office (Excel), SAP ERP, Looker Data Studio, Power BI, Python</li>
-        <li><strong>Languages:</strong>Indonesia (Aktif), English (Pasif)</li>
-      </ul>
-    </div>
-    
-    <h2>Reference</h2>
-    <div class="section-content">
-      <p><strong>Hafizil Ziko S</strong> – Data Analyst, PT Sukanda Djaya | <a href="https://wa.me/626285269543471">+62 852 6954 3471</a></p>
-    </div>
-    
   </section>
-    <!-- ⬇️ Tempelkan script di sini -->
-  <script>
-    const sections = document.querySelectorAll("section");
-    const showOnScroll = () => {
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          section.classList.add("visible");
-        }
-      });
-    };
-    window.addEventListener("scroll", showOnScroll);
-    window.addEventListener("load", showOnScroll);
-  </script>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container py-5">
+    <h2 class="section-title">Projects Dashboard</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?code" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard Power BI – Monitoring Stock</h5>
+            <p class="card-text">This dashboard is designed to visualize warehouse stock monitoring based on data from SAP ERP. Its purpose is to track stock availability, cycle count accuracy, and other key indicators.</p>
+	    <p>🗂️ <strong>Link:</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiODNmNjI3ZjMtNDcwMC00YjQxLTg4NjgtMjZiNmI1ZTM4NjUyIiwidCI6ImU0MDIwZTNkLTIzMWUtNDVmMS1iMDIzLWU0NjNiMWYwZjdmMiIsImMiOjEwfQ%3D%3D" target="_blank">Lihat Dashboard Power BI</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?website" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard Power BI – Accuracy Cycle Counting</h5>
+            <p class="card-text">This dashboard is designed to visualize the monitoring of Cycle Count Accuracy, which measures the level of alignment between the physical stock in the warehouse and the system records (SAP/WMS) based on regularly conducted cycle counting processes. Its purpose is to ensure inventory data reliability, detect recording errors early, and support operational efficiency so that a full stock opname can achieve maximum accuracy.</p>
+            <p>🗂️ <strong>Link:</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiNDAyMDA4NjMtMGRjOS00M2ZmLTk2MzQtOWNhYzM5MmFiYmIzIiwidCI6ImU0MDIwZTNkLTIzMWUtNDVmMS1iMDIzLWU0NjNiMWYwZjdmMiIsImMiOjEwfQ%3D%3D" target="_blank">Lihat Dashboard Power BI</a></p> 
+	 </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?app" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard Power BI – Monitoring Purchase Order</h5>
+            <p class="card-text">This dashboard is designed to visualize the monitoring process of Purchase Orders (PO), from issuance to goods receipt. Through this dashboard, users can view the status of each PO, calculate order lead time, evaluate vendor performance based on delivery punctuality, and identify potential bottlenecks in the procurement process. This enables the procurement team to take timely and accurate actions in managing purchase orders.</p>
+	    <p>🗂️ <strong>Link:</strong> <a href="https://app.powerbi.com/view?r=eyJrIjoiOTVhMWYwOGQtZDQ3Zi00YTQ2LWEwZGQtYjA5MWI5MGIzNDhkIiwidCI6ImU0MDIwZTNkLTIzMWUtNDVmMS1iMDIzLWU0NjNiMWYwZjdmMiIsImMiOjEwfQ%3D%3D" target="_blank">Lihat Dashboard Power BI</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="container section-box">
+    <h2 class="section-title">Publications</h2>
+    <ul class="list-unstyled fs-5">
+      <li><i class="fa-solid fa-book-open me-2 text-primary"></i><a href="https://journal-laaroiba.com/ojs/index.php/edu/article/view/4466" target="_blank" class="publication-link">"Strategi Komunikasi Kepala Desa dalam Meningkatkan Pendidikan Masyarakat di Desa Karang Mukti Kecamatan Karang Bahagia Kabupaten Bekasi" - Journal of Basic Educational Studies, 2024</a></li>
+      <li><i class="fa-solid fa-book-open me-2 text-primary"></i><a href="https://jiss.publikasiindonesia.id/index.php/jiss/article/view/1086" target="_blank" class="publication-link">"Governance of The Corporate Social Responsibility (CSR) Program of Karang Mukti Village in The Development of Embung Batu Beureum Tourism" - Jurnal Indonesia Sosial Sains, 2024</a></li>
+      <li><i class="fa-solid fa-book-open me-2 text-primary"></i><a href="https://journal.ikopin.ac.id/index.php/humantech/article/view/3552" target="_blank" class="publication-link">"Strategi Public Relations Klinik Pusat Fertilitas Bocah Indonesia Dalam Menyebarkan Informasi Melalui Media Sosial Instagram" - Journal IKOPIN, 2023</a></li>
+    </ul>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; Samsudin, S.Kom., M.I.Kom. All rights reserved.</p>
+    <div>
+      <a href="https://www.instagram.com/samsudin.03" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/samsudin-s-kom-m-i-kom-8244a41a6/" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/samsudin310" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
