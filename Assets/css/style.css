@@ -11,7 +11,7 @@ body {
   line-height: 1.7;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   height: 100vh;
   background: url('../images/Background.jpg') center/cover no-repeat;
@@ -53,7 +53,7 @@ body {
   color: var(--primary);
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section-box {
   background: white;
   border-radius: 14px;
@@ -62,6 +62,19 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* ================= REVEAL ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= SECTION TITLE ================= */
 .section-title {
   text-align: center;
   font-weight: 700;
@@ -77,16 +90,17 @@ body {
   margin: 0.8rem auto;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 .card {
   border: none;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card img {
@@ -94,7 +108,7 @@ body {
   object-fit: cover;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   background-color: var(--dark);
 }
@@ -102,4 +116,10 @@ footer {
 footer a {
   color: white;
   font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary);
+  transform: scale(1.15);
 }
